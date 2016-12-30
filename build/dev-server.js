@@ -9,12 +9,9 @@ var proxyMiddleware = require('http-proxy-middleware')
 var webpackConfig = require('./webpack.dev.conf')
 
 // default port where dev server listens for incoming traffic
-var port = process.env.PORT || 3000,
-	function() {
-		console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-	});
-// Define HTTP proxies to your custom API backend
-// https://github.com/chimurai/http-proxy-middleware
+var port = process.env.PORT || 3000
+	// Define HTTP proxies to your custom API backend
+	// https://github.com/chimurai/http-proxy-middleware
 var proxyTable = config.dev.proxyTable
 
 var app = express()
